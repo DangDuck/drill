@@ -1,0 +1,102 @@
+ADMIN
+nama menu: master data
+nama submenu:
+- Invoice fas fa-fw fa-file-invoice
+- Resi fas fa-fw fa-receipt
+- Customer fas fa-fw fa-address-book
+- User fas fa-fw fa-users
+
+USER
+nama menu: menu
+nama submenu: 
+- Home fas fa-fw fa-home
+- Daftar Pesanan fas fa-fw fa-shopping-basket
+
+invoice
+INVYYYYMMDD-BX000-000
+11+1+5+1+3
+12+6+3
+18+3
+21
+ALLOWANCE 1
+22
+
+
+
+Customer
+id
+customer_code
+nama
+nomor_telpon
+alamat
+instagram
+created_at
+updated_at
+
+User
+username
+password
+id_role
+
+Resi
+nomor_resi
+nomor_resi_boxtip
+nomor_invoice
+id_resi_status
+
+simpan dalam session pas login
+customer_code
+nama
+id_role
+id_customer
+
+21/1
+tinggal customer, user, resi
+
+-------------------------------------------------------------------------------------
+*************************************************************************************
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+CODE TAK JALAN 
+// CHANGE MODEL CONTENT - INVOICE
+// const btnAdd = document.querySelector(".btn-add");
+// const btnEdit = document.querySelectorAll(".btn-edit");
+// const btnEditArray = Array.from(btnEdit);
+// const labelModelInvoice = document.querySelector("#staticBackdropLabel");
+// const btnSubmitModelInvoice = document.querySelector(".btn-submit");
+
+// btnAdd.addEventListener("click", function () {
+//   console.log("ok");
+//   labelModelInvoice.textContent = "UPLOAD INVOICE";
+//   btnSubmitModelInvoice.innerHTML = "Upload";
+// });
+
+// btnEditArray.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     console.log("edit");
+//     labelModelInvoice.textContent = "UPDATE INVOICE";
+//     btnSubmitModelInvoice.innerHTML = "Update";
+
+//     const id = this.dataset.id;
+//     var xhr = new XMLHttpRequest();
+//     var url = "http://localhost:8080/master/update?id=";
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState == 4 && xhr.status == 200) {
+//         if (xhr.responseText != "") {
+//           console.log(xhr.responseText);
+//           var data = xhr.responseText;
+//           // customer code
+//           document.querySelector("#customerCode").value = data.customer_code;
+//           // payment status
+//           document.querySelector("#paymentStatus").value =
+//             data.id_payment_status;
+//           // nama file
+//           document.querySelector(".custom-label-file").textContent =
+//             data.file_path;
+//         }
+//       }
+//     };
+//     xhr.onload = function () {};
+//     xhr.open("GET", url + id, true);
+//     xhr.send();
+//   });
+// });

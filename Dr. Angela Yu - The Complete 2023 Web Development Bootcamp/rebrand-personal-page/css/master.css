@@ -1,0 +1,217 @@
+/* Common */
+body {
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: #444;
+}
+
+hr {
+  border-style: dotted none none;
+  border-color: #ff8b00;
+  background-color: transparent;
+  border-width: 10px;
+  width: 50px;
+  margin: auto;
+}
+
+.section-head {
+  font-size: 3rem;
+  color: #ff8b00;
+}
+
+/* Jumbotron */
+#jumbotron {
+  background-color: #feffdb;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+.name {
+  font-family: "Sacramento", cursive;
+  color: #ff8b00;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.role {
+  color: #ffc60b;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.duck-left {
+  width: 80px;
+  position: absolute;
+  left: 20%;
+  bottom: 300px;
+}
+
+.duck-right {
+  width: 80px;
+  transform: scaleX(-1);
+  position: absolute;
+  right: 20%;
+  top: 50px;
+}
+
+.island-center {
+  width: 30%;
+}
+
+/* Introduction */
+#introduction {
+  background-color: #fff;
+  padding: 5% 0;
+}
+
+.img-me {
+  width: 250px;
+  margin-bottom: 100px;
+}
+
+.intro-greeting {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ff8b00;
+}
+
+.intro-description {
+  color: #444;
+  margin: 0;
+}
+
+/* Skills */
+#skills,
+#projects {
+  padding: 5% 0;
+}
+
+.subsection-head {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffc60b;
+  margin-bottom: 1em;
+}
+
+.skill-row,
+.project-row {
+  margin-top: 50px;
+  padding: 2% 5%;
+}
+
+.skill-img,
+.project-img {
+  width: 100%;
+  border-radius: 100%;
+  box-shadow: 20px 21px 25px -9px rgba(151, 151, 151, 0.65);
+  -webkit-box-shadow: 20px 21px 25px -9px rgba(151, 151, 151, 0.65);
+  -moz-box-shadow: 20px 21px 25px -9px rgba(151, 151, 151, 0.65);
+}
+
+.skill-header,
+.project-header {
+  color: #ffc60b;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.skill-description,
+.project-description {
+  text-align: left;
+}
+
+/* Contact */
+#contact {
+  padding: 5% 0;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 3% 10%;
+  background: #feffdb;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.contact-link:hover {
+  background-color: #fdffab;
+  color: #444;
+}
+.contact-description {
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  margin: 10px 0 40px;
+}
+/* Footer */
+#footer {
+  padding: 6% 0;
+  background-color: #feffdb;
+}
+.social-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 5% 20px;
+  color: #444;
+}
+.social-link:hover {
+  color: #ffc60b;
+}
+.copyright-text {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+  .duck-right,
+  .duck-left {
+    display: none;
+  }
+
+  .intro-greeting {
+    padding: 0 20px;
+  }
+
+  .intro-description {
+    padding: 0 20px;
+  }
+
+  .img-me {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .skill-img {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .skill-header {
+    text-align: center;
+  }
+
+  .skill-description {
+    text-align: justify;
+  }
+  .contact-description {
+    margin: 10px 0 10px;
+  }
+
+  .contact-link {
+    padding: 5% 10%;
+    margin-bottom: 6%;
+  }
+
+  .social-link {
+    font-size: 1rem;
+    margin: 0 2%;
+  }
+}
