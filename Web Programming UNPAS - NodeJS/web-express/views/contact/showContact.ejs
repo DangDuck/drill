@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-8">
+        <% if (!data.contact) { %>
+        <div class="alert alert-danger" role="alert">Not found!</div>
+        <% } else { %>
+        <div class="card" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title"><%= data.contact.name %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <%= data.contact.phone %>
+                </h6>
+                <p class="card-text"><%= data.contact.email %></p>
+                <a
+                    href="/contact/edit/<%= data.contact.name %>"
+                    class="btn btn-primary badge"
+                    >Edit</a
+                >
+                <a
+                    href="/contact/delete/<%= data.contact.name %>"
+                    class="btn btn-danger badge"
+                    onclick="return confirm('Confirm?')"
+                    >Delete</a
+                >
+                <a href="/contact" class="card-link d-block mt-2"
+                    >&laquo; Back to list</a
+                >
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>

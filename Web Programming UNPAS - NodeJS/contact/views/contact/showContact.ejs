@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-8">
+        <% if (!contact) { %>
+        <div class="alert alert-danger" role="alert">Not found!</div>
+        <% } else { %>
+        <div class="card" style="width: 18rem">
+            <div class="card-body">
+                <h5 class="card-title"><%= contact.name %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <%= contact.phone %>
+                </h6>
+                <p class="card-text"><%= contact.email %></p>
+                <a
+                    href="/contact/edit/<%= contact.name %>"
+                    class="btn btn-primary badge"
+                    >Edit</a
+                >
+                <!-- <a
+                    href="/contact/delete/<%= contact.name %>"
+                    class="btn btn-danger badge"
+                    onclick="return confirm('Confirm?')"
+                    >Delete</a
+                > -->
+                <form
+                    action="/contact?_method=DELETE"
+                    method="post"
+                    class="d-inline"
+                    onclick="return confirm('Confirm?')"
+                >
+                    <input
+                        type="hidden"
+                        name="_id"
+                        value="<%= contact._id %>"
+                    />
+                    <button type="submit" class="btn btn-danger badge">
+                        Delete
+                    </button>
+                </form>
+                <a href="/contact" class="card-link d-block mt-2"
+                    >&laquo; Back to list</a
+                >
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>

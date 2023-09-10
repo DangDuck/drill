@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-6">
+        <h2>Edit Contact</h2>
+        <form method="post" action="/contact/update">
+            <% if (typeof errors != 'undefined') { %>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <% errors.forEach(err => { %>
+                    <li><%= err.msg %></li>
+                    <% }) %>
+                </ul>
+            </div>
+            <% } %>
+            <input
+                type="hidden"
+                name="oldName"
+                value="<%= data.contact.oldName || data.contact.name %>"
+            />
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                    value="<%= data.contact.name %>"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                    value="<%= data.contact.email %>"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    required
+                    value="<%= data.contact.phone %>"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="return confirm('Confirm?')"
+            >
+                Save
+            </button>
+        </form>
+    </div>
+</div>
